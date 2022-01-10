@@ -43,7 +43,7 @@ jobs:
         run: npm install
         working-directory: modulo1
         
-      - name: Roda NX
-        run: nx run-many --target=serve --all
-        working-directory: modulo1
+      # - name: Comando de Rodar Aplicacao
+      #   run: nx run-many --target=serve --all
+      #   working-directory: modulo1
       
