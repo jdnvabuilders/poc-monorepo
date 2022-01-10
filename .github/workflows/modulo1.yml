@@ -15,6 +15,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env:
+  MODULE_PATH: modulo1/
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -39,11 +42,11 @@ jobs:
 
       - name: Instala NX
         run: npm install -g nx
-        working-directory: modulo1
+        working-directory: ${{ env.MODULE_PATH }}
        
       - name: NPM Install
         run: npm install
-        working-directory: modulo1
+        working-directory: ${{ env.MODULE_PATH }}
         
       # - name: Comando de Rodar Aplicacao
       #   run: nx run-many --target=serve --all
