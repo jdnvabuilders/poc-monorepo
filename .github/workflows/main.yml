@@ -41,5 +41,5 @@ jobs:
         
       - name: Roda NX
         run: nx run-many --target=serve --all
-         working-directory: modulo1
+        working-directory: modulo1
       
