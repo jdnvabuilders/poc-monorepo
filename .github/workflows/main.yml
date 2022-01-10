@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     
     strategy:
-      matrix:
+      monorepo:
         node-version: [12.2]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -30,16 +30,16 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Use Nodejs ${{ matrix.node-version }}
+      - name: Use Nodejs ${{ monorepo.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: ${{ monorepo.node-version }}
 
-      - name: Instala Dependencias
+      - name: Instala NX
         run: npm install -g nx
         working-directory: modulo1
        
-      - name: Instala Dependencias
+      - name: NPM Install
         run: npm install
         working-directory: modulo1
         
