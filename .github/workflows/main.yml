@@ -37,7 +37,9 @@ jobs:
           
       - name: Instala Dependencias
         run: npm install
+        working-directory: modulo1
         
       - name: Roda NX
         run: nx run-many --target=serve --all
+         working-directory: modulo1
       
