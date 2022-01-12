@@ -1,9 +1,4 @@
-## README
-
-Pipeline estilo monorepo, com trigger por pasta, onde as modificacoes dos arquivos causam start no processo de build.
-
-
-## Install Nx CLI
+##### Install Nx CLI
 
 Run `npm install -g nx`
 

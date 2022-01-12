@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: POC-MONOREPO-Module-2
+name: service-a
 
 # Controls when the workflow will run
 on:
@@ -8,7 +8,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'modulo2/**'
+      - 'apps/service-a//**'
   pull_request:
     branches: [ main ]
 
@@ -16,7 +16,7 @@ on:
   workflow_dispatch:
 
 env:
-  MODULE_PATH: modulo2/
+  MODULE_PATH: apps/service-a/
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -50,5 +50,5 @@ jobs:
         
       # - name: Comando de Rodar Aplicacao
       #   run: nx run-many --target=serve --all
-      #   working-directory: ${{ env.MODULE_PATH }}
+      #   working-directory: modulo1
       
